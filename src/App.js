@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import swal from 'sweetalert';
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
 console.log(studentname)
 var data={
    "data": {
-  "name": studentname 
+  "Name": studentname 
 }
 }
 
-/*fetch(
+fetch(
   'https://ancient-oasis-43602.herokuapp.com/api/students', { method: 'POST',
   headers:{
     'Content-Type': 'application/json', 
@@ -26,7 +26,7 @@ var data={
   },
   body: JSON.stringify(data)
 }).then((d)=>{console.log(d.status)
-if(d.status== 200){
+if(d.status=== 200){
 
 swal("Great Job","data created success","succss")
 
@@ -37,7 +37,7 @@ swal("Great Job","data created success","succss")
   swal("Great Job","bad","fail")
 }).finally((all)=>{
   swal("Great Job","data created success","succss")
-});*/
+});
   }
   return (
     <div className="App">
