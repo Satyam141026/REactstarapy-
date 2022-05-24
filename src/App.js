@@ -1,22 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import swal from 'sweetalert';
 
 function App() {
 
-  const [data ,setData]=useState("satyam")
-  let myfunction=(e)=>{
+  const [studentname ,setData]=useState("satyam")
+  //useEffect(() => {
 
-console.log(data);
+  //},[]);
+  let myfunction=()=>{
 
+console.log(studentname)
+var data={
+   "data": {
+  "name": studentname 
+}
+}
+
+/*fetch(
+  'https://ancient-oasis-43602.herokuapp.com/api/students', { method: 'POST',
+  headers:{
+    'Content-Type': 'application/json', 
+  //  'accept: application/json'
+  },
+  body: JSON.stringify(data)
+}).then((d)=>{console.log(d.status)
+if(d.status== 200){
+
+swal("Great Job","data created success","succss")
+
+}
+
+}).catch((e)=>{
+
+  swal("Great Job","bad","fail")
+}).finally((all)=>{
+  swal("Great Job","data created success","succss")
+});*/
   }
   return (
     <div className="App">
+      {studentname }
   <form>
       <label>Enter your name:
-        <input type="text" value={data} onChange={(e)=>{setData(e.target.value)}} />
+        <input type="text" value={studentname} onChange={(e)=>{setData(e.target.value)}} />
       </label>
-      <button type="button" name="student" onClick={myfunction} >Click here</button>
+      <input type="button" name="student" onClick={myfunction} value="save button" />
     </form>
     </div>
   );
