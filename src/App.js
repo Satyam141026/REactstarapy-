@@ -35,8 +35,10 @@ swal("Great Job","data created success","succss")
 }).catch((e)=>{
 
   swal("Great Job","bad","fail")
+
 }).finally((all)=>{
-  swal("Great Job","data created success","succss")
+ 
+  
 });
   }
   return (
